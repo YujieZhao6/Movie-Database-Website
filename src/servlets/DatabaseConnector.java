@@ -9,8 +9,8 @@ import java.sql.SQLException;
 
 public class DatabaseConnector {
 	private static final String url = "jdbc:mysql://127.0.0.1:3306/moviedb";
-    // private static final String userName = "";
-    // private static final String password = "";
+    private static final String userName = "";
+    private static final String password = "";
     
     public static Connection getConnection() {
 

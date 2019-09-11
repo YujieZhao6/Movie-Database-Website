@@ -28,12 +28,12 @@ public class VerifyPassword {
 
     public static boolean verifyCredentials(String email, String password) throws Exception {
 
-        String loginUser = "moviedb";
-        String loginPasswd = "moviedb123!";
+        String loginUser = "";
+        String loginPassword = "";
         String loginUrl = "jdbc:mysql://localhost:3306/moviedb";
 
         Class.forName("com.mysql.jdbc.Driver").newInstance();
-        Connection connection = DriverManager.getConnection(loginUrl, loginUser, loginPasswd);
+        Connection connection = DriverManager.getConnection(loginUrl, loginUser, loginPassword);
         Statement statement = connection.createStatement();
 
         String query = String.format("SELECT * from customers where email='%s'", email);
@@ -47,6 +47,7 @@ public class VerifyPassword {
 
             // use the same encryptor to compare the user input password with encrypted password stored in DB
             success = new StrongPasswordEncryptor().checkPassword(password, encryptedPassword);
+            //success = encryptedPassword.equals(password);
         }
 
         rs.close();

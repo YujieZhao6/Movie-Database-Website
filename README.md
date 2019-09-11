@@ -1,7 +1,7 @@
 # MovieDB Website
 #### This is a Full-Stack web project and finished during my exchange study in UCI.
 
-You Can visit <http://18.237.112.131/MovieDB/mainpage.html> to view the demo.
+You Can visit <http://34.82.93.119:8080/MovieDB/mainpage.html> to view the demo.
 
 If you want to login in, you can use this account：
 
